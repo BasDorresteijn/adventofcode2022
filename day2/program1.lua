@@ -47,4 +47,4 @@ for line in io.lines(file) do
     score = score + myPickScore[myPick]
 end
 
-print(score)
+print('answer 1:', score)

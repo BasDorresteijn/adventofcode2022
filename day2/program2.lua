@@ -39,13 +39,13 @@ local transformOutcome = {
 local loseOptionScore = {
     Rock = myPickScore[pickEnum.Scissors],
     Paper = myPickScore[pickEnum.Rock],
-    Scissors = myPickScore[pickEnum.Paper],
+    Scissors = myPickScore[pickEnum.Paper]
 }
 
 local winOptionScore = {
     Rock = myPickScore[pickEnum.Paper],
     Paper = myPickScore[pickEnum.Scissors],
-    Scissors = myPickScore[pickEnum.Rock],
+    Scissors = myPickScore[pickEnum.Rock]
 }
 
 for line in io.lines(file) do
@@ -63,4 +63,4 @@ for line in io.lines(file) do
     score = score + outcomeScore[outcome]
 end
 
-print(score)
+print('answer 2:', score)
