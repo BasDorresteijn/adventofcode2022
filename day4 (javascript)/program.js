@@ -2,6 +2,7 @@ const fs = require('fs');
 
 const data = fs.readFileSync('day4/file.txt', { encoding: 'utf8', flag: 'r' });
 const result1 = data.split('\n').filter(x => {
+    if (!x) return false;
     const sections = x.split(',');
     const sectionA = sections[0].split('-');
     const sectionB = sections[1].split('-');
@@ -15,6 +16,7 @@ const result1 = data.split('\n').filter(x => {
 console.log('Answer 1: ', result1.length);
 
 const result2 = data.split('\n').filter(x => {
+    if (!x) return false;
     const sections = x.split(',');
     const sectionA = sections[0].split('-');
     const sectionB = sections[1].split('-');

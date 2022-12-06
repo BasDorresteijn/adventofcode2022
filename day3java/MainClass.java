@@ -1,4 +1,4 @@
-package day3;
+package day3java;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -23,6 +23,8 @@ public class MainClass {
 
             while (myReader.hasNextLine()) {
                 var data = myReader.nextLine();
+                if (data == "\n")
+                    continue;
                 var dataLength = data.length();
                 var leftSide = data.substring(0, dataLength / 2);
                 var rightSide = data.substring(dataLength / 2, dataLength);
