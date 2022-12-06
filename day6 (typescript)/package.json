@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "run": "tsc .\\program.ts && node .\\program.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.11"
+  },
+  "dependencies": {
+    "typescript": "^4.9.3"
+  }
+}
