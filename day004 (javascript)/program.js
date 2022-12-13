@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const data = fs.readFileSync('day4/file.txt', { encoding: 'utf8', flag: 'r' });
+const data = fs.readFileSync('day004/file.txt', { encoding: 'utf8', flag: 'r' });
 const result1 = data.split('\n').filter(x => {
     if (!x) return false;
     const sections = x.split(',');
