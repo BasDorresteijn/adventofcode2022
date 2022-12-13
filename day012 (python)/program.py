@@ -6,6 +6,7 @@ filename = os.path.join(here, 'file.txt')
 
 map = []
 start_point = (0, 0)
+a_points = []
 end_point = (0, 0)
 
 with open(filename, 'r') as file:
@@ -19,6 +20,8 @@ with open(filename, 'r') as file:
             if char == 'E':
                 char = 'z'
                 end_point = (xIdx, yIdx)
+            if char == 'a':
+                a_points.append((xIdx, yIdx))
             submap.append(char)
         map.append(submap)
 
@@ -57,6 +60,7 @@ def find_points(start_points, path_count=0, print_map=print_map):
     if print_map:
         print_map()
         time.sleep(0.2)
+
     return find_points(next_points, path_count + 1)
 
 
@@ -98,4 +102,6 @@ def print_map():
         print("")
 
 
-print("Answer 1: ", find_points([start_point], 0))
+print("Answer 1: ", find_points([start_point]))
+points_checked = []
+print("Answer 2: ", find_points(a_points))
