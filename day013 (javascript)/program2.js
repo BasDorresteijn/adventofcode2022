@@ -56,15 +56,7 @@ const compareTrees = (tree1, tree2) => {
 dividerPackage2 = [[2]]
 dividerPackage6 = [[6]]
 rows.push(dividerPackage2, dividerPackage6)
-sortedRows = [];
 
-for (const row of rows) {
-    let insertBefore = sortedRows.findIndex(x => compareTrees(row, x) === ReturnType.IncorrectOrder);
-    if (insertBefore === -1) {
-        insertBefore = sortedRows.length;
-    }
-    sortedRows.splice(insertBefore, 0, row);
-}
+rows.sort((x, y) => compareTrees(x, y) === ReturnType.CorrectOrder ? -1 : 1)
 
-sortedRows.reverse();
-console.log("Answer 2:", (sortedRows.indexOf(dividerPackage2) + 1) * (sortedRows.indexOf(dividerPackage6) + 1));
+console.log("Answer 2:", (rows.indexOf(dividerPackage2) + 1) * (rows.indexOf(dividerPackage6) + 1));
