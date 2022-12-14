@@ -83,21 +83,6 @@ for (const parsedRow of parsedRows) {
     }
 }
 
-
-for (const mapRow of map) {
-    let mapRowDrawn = '';
-    for (const mapItem of mapRow) {
-        let icon = '.';
-        if (mapItem === Item.Rock) {
-            icon = '#';
-        } else if (mapItem === Item.Sand) {
-            icon = '0';
-        }
-        mapRowDrawn += icon;
-    }
-    console.log(mapRowDrawn);
-}
-
 const sandStartX = 500 - minX;
 const sandStartY = 0;
 
